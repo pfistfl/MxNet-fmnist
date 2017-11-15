@@ -1,0 +1,15 @@
+deep_fullyconnected = function() {
+  data = mx.symbol.Variable("data")
+  drop0 = mx.symbol.Dropout(data, p = 0.3)
+  fc1 = mx.symbol.FullyConnected(drop0, name = "fc1", num_hidden = 256)
+  act1 = mx.symbol.Activation(fc1, name = "relu1", act_type = "relu")
+  drop1 = mx.symbol.Dropout(act1, p = 0.2)
+  fc2 = mx.symbol.FullyConnected(drop1, name = "fc2", num_hidden = 128)
+  act2 = mx.symbol.Activation(fc2, name = "relu2", act_type = "relu")
+  # drop2 = mx.symbol.Dropout(act2, p = 0.2)
+  fc3 = mx.symbol.FullyConnected(act2, name = "fc3", num_hidden = 64)
+  act3 = mx.symbol.Activation(fc3, name = "relu3", act_type = "relu")
+  # drop3 = mx.symbol.Dropout(act3, p = 0.2)
+  fc4 = mx.symbol.FullyConnected(act3, name = "fc4", num_hidden = 10)
+  softmax = mx.symbol.SoftmaxOutput(fc4, name = "sm")
+}
