@@ -1,6 +1,5 @@
 library("mxnet")
 library("R6")
-library("checkmate")
 
 #' Variational Autoencoder for mxnet
 #' 
