@@ -1,5 +1,5 @@
 # MxNet-fmnist
-Some MXNET architectures and Code for fmnist
+Testing some MXNET architectures on fmnist
 
 + Preprocessing
   - Mirror
